@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Inscrição</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="conteudo">
+        <div class="coluna-formulario">
+            <section id="inicio" class="formulario">
+                <div class="formulario-conteudo">
+                    
+                    <div class="navegacao">
+                        <a href="/index.html" class="link-voltar">
+                            <img src="imagem/image.png" alt="Seta" class="icone-voltar">
+                        </a>
+                    </div>  
+                    <h1>Formulário de Inscrição</h1>
+                    <form id="formularioInscricao">
+                        <h2>Informações do participante</h2>
+
+                        <label for="nome">Nome completo:</label>
+                        <input type="text" id="nome" name="nome" required>
+
+                        <div class="linha">
+                            <div>
+                                <label for="dataNascimento">Data de nascimento:</label>
+                                <input id="dataNascimento" type="date" max="2025-03-18"/>
+                            </div>
+                            <div>
+                                <label for="documentoCPF">CPF:</label>
+                                <input type="text" id="documentoCPF" name="documentoCPF" required>
+                            </div>
+                        </div>
+
+                        <div class="linha">
+                            <div>
+                                <label for="genero">Sexo:</label>
+                                <select id="genero" name="genero" required>
+                                    <option value="feminino">Feminino</option>
+                                    <option value="masculino">Masculino</option>
+                                    <option value="outro">Outro</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="emailUsuario">E-mail:</label>
+                                <input type="text" id="emailUsuario" name="emailUsuario" required>
+                            </div>
+                        </div>
+
+                        <div class="linha">
+                            <div>
+                                <label for="telefone">Telefone</label>
+                                <input type="text" id="telefone" name="telefone">
+                            </div>
+                        </div>
+                        
+                        <div class="linha">
+                            <div>
+                                <label for="identidade">Documento de identidade:</label>
+                                <div class="upload-arquivo">
+                                    <img id="imgIdentidade" src="imagem/upload.png" alt="Upload Documento" onclick="document.getElementById('identidade').click()">
+                                    <input type="file" id="identidade" name="identidade" required style="display: none;">
+                                </div>
+                            </div>
+                        </div>
+
+                        <h2>Endereço residencial</h2>
+
+                        <div class="linha">
+                            <div>
+                                <label for="cepUsuario">CEP:</label>
+                                <input type="text" id="cepUsuario" name="cepUsuario" required>
+                            </div>
+                            <div>
+                                <label for="logradouro">Rua:</label>
+                                <input type="text" id="logradouro" name="logradouro" required>
+                            </div>
+                        </div>
+
+                        <div class="linha">
+                            <div>
+                                <label for="numeroCasa">Número:</label>
+                                <input type="text" id="numeroCasa" name="numeroCasa" required>
+                            </div>
+                            <div>
+                                <label for="cidade">Cidade:</label>
+                                <input type="text" id="cidade" name="cidade" required>
+                            </div>
+                        </div>
+
+                        <div class="linha">
+                            <div>
+                                <label for="estado">Estado:</label>
+                                <input type="text" id="estado" name="estado" required>
+                            </div>
+                        </div>
+
+                        <h2>Comprovante de residência</h2>
+
+                        <div class="linha">
+                            <div>
+                                <div class="upload-arquivo">
+                                    <img id="imgResidencia" src="imagem/upload.png" alt="Upload Comprovante" onclick="document.getElementById('residencia').click()">
+                                    <input type="file" id="residencia" name="residencia" required style="display: none;">
+                                </div>
+                            </div>
+                        </div>
+
+                        <h2>Trilhas de aprendizagem</h2>
+
+                        <div class="selecao-trilha">
+                            <label class="opcao-trilha">
+                                <input type="radio" name="trilha" value="frontend" required>
+                                <img src="imagem/front.png" alt="Front-end">
+                                <span>Programação Front-end</span>
+                            </label>
+                            <label class="opcao-trilha">
+                                <input type="radio" name="trilha" value="backend" required>
+                                <img src="imagem/backend.png" alt="Back-end">
+                                <span>Programação Back-end</span>
+                            </label>
+                            <label class="opcao-trilha">
+                                <input type="radio" name="trilha" value="games" required>
+                                <img src="imagem/games.png" alt="Jogos">
+                                <span>Programação de Jogos</span>
+                            </label>
+                            <label class="opcao-trilha">
+                                <input type="radio" name="trilha" value="design" required>
+                                <img src="imagem/design.png" alt="Design">
+                                <span>Design e Experiência</span>
+                            </label>
+                            <label class="opcao-trilha">
+                                <input type="radio" name="trilha" value="data" required>
+                                <img src="imagem/data.png" alt="Dados">
+                                <span>Ciência de Dados</span>
+                            </label>
+                        </div>
+
+                        <div class="politica">
+                            <input type="checkbox" id="termos" name="termos" required>
+                            <label for="termos">Li e concordo com os Termos e a Política de Privacidade.</label>
+                        </div>
+                        
+                        <div class="botao-area">
+                            <button type="submit" class="botao-inscricao">Fazer inscrição</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+
+        <div class="coluna-imagem"></div>
+    </div>
+
+</body>
+</html>
